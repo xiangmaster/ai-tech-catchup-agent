@@ -25,6 +25,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Configure model auth (validation-only replica)
+        run: |
+          mkdir -p "$HOME/.gemini"
+          printf '%s' '{"security":{"auth":{"selectedType":"gemini-api-key"}}}' > "$HOME/.gemini/settings.json"
+
       - name: Run Gemini CLI
         id: gemini
         uses: google-github-actions/run-gemini-cli@v0
