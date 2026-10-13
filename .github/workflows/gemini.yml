@@ -13,6 +13,8 @@ on:
 jobs:
   gemini:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_GEMINI_BASE_URL: https://api.openlux.ai
     permissions:
       contents: write
       pull-requests: write
