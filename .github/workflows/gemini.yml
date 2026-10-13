@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOOGLE_GEMINI_BASE_URL: https://api.openlux.ai
+      GEMINI_CLI_TRUST_WORKSPACE: "true"
     permissions:
       contents: write
       pull-requests: write
